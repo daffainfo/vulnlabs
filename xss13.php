@@ -1,11 +1,12 @@
 <?php
 error_reporting(0);
 header('X-XSS-Protection: 0');
+$param = $_GET['query'];
 ?>
 <html>
 
 <head>
-    <title>Cross Site Scripting | Level 7</title>
+    <title>Cross Site Scripting | Level 13</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,13 +17,18 @@ header('X-XSS-Protection: 0');
 
 <body>
     <div class="container m-5">
-        <h1>XSS Level 7</h1>
+        <h1>XSS Level 13</h1>
         <p>Try to alert using <b>document.domain</b></p>
         <button class="btn btn-primary mb-3" onclick="func()">Clue</button>
-        <p id="clue" style="display:none">Try editing your user-agent header</p>
-        <p>Your user agent: <?php echo $_SERVER['HTTP_USER_AGENT']; ?></p>
+        <p id="clue" style="display:none">Using ${expression} if using ` (backticks)</p>
+        <form class="form-inline my-2 my-lg-0" action="?query=" method="get">
+            <input class="form-control mr-sm-2" type="text" placeholder="keyword" name="query">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
     </div>
     <script>
+        var dapos = `<?php echo str_replace("<", "", $param); ?>`;
+
         function func() {
             var x = document.getElementById("clue");
             if (x.style.display === "none") {

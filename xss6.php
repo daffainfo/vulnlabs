@@ -6,7 +6,7 @@ $param = $_GET['query'];
 <html>
 
 <head>
-    <title>Cross Site Scripting | Level 7</title>
+    <title>Cross Site Scripting | Level 6</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,21 +16,27 @@ $param = $_GET['query'];
 </head>
 
 <body>
+    <!--<?php echo $param; ?>-->
     <div class="container m-5">
-        <h1>XSS Level 7</h1>
+        <h1>XSS Level 6</h1>
         <p>Try to alert using <b>document.domain</b></p>
-        <br>
+        <button class="btn btn-primary mb-3" onclick="func()">Clue</button>
+        <p id="clue" style="display:none">Add --> to escape the payload if input lands in HTML comments.</p>
         <form class="form-inline my-2 my-lg-0" action="?query=" method="get">
             <input class="form-control mr-sm-2" type="text" placeholder="keyword" name="query">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
+    <script>
+        function func() {
+            var x = document.getElementById("clue");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </body>
-<script>
-    var xss = 1;
-    if (xss < 10) {
-        var test = '<?php echo str_replace(">", "", $param); ?>';
-    }
-</script>
 
 </html>

@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root1";
-$password = "root1";
+$username = "vulnlab";
+$password = "vulnlab";
 $databasename = "vulnlabs";
 
 // Create connection

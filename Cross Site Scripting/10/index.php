@@ -31,14 +31,7 @@ $param = $_GET['query'];
 <script>
     var dapos = '<?php echo str_replace("'", "\'", $param); ?>';
 
-    function func() {
-        var x = document.getElementById("clue");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
+
 </script>
 
 </html>

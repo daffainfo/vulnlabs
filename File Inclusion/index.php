@@ -24,6 +24,7 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Labs 1</h5>
+                        <p class="card-text">Simple file inclusion</p>
                         <a href="1" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
@@ -32,6 +33,7 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Labs 2</h5>
+                        <p class="card-text">Blacklisted special character (1)</p>
                         <a href="2" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
@@ -40,7 +42,8 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Labs 3</h5>
-                        <a href="2" class="btn btn-primary">Click Here</a>
+                        <p class="card-text">Blacklisted special characters (2)</p>
+                        <a href="3" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>

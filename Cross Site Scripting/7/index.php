@@ -19,20 +19,9 @@ header('X-XSS-Protection: 0');
         <a href="./">> Back to Home</a>
         <h1>XSS Level 7</h1>
         <p>Try to alert using <b>document.domain</b></p>
-        <button class="btn btn-primary mb-3" onclick="func()">Clue</button>
-        <p id="clue" style="display:none">Try editing your user-agent header</p>
         <p>Your user agent: <?php echo $_SERVER['HTTP_USER_AGENT']; ?></p>
     </div>
-    <script>
-        function func() {
-            var x = document.getElementById("clue");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
+
 </body>
 
 </html>

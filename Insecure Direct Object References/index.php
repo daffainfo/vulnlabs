@@ -20,27 +20,21 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Labs 1</h5>
+                        <p class="card-text">IDOR at edit feature</p>
                         <a href="1" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Labs 2</h5>
+                        <p class="card-text">IDOR at delete feature</p>
                         <a href="2" class="btn btn-primary">Click Here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Labs 3</h5>
-                        <a href="3" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>

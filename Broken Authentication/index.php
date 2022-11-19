@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- broken -->
 <head>
-    <title>Unrestricted File Upload Labs</title>
+    <title>Broken Authentication Labs</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -14,8 +13,8 @@
 <body>
 
     <div class="jumbotron text-center">
-        <h1>Unrestricted File Upload Labs</h1>
-        <p>Welcome to Unrestricted File Upload Labs, there is some labs you can try!</p>
+        <h1>Broken Authentication Labs</h1>
+        <p>Welcome to Broken Authentication Labs, there is some labs you can try!</p>
     </div>
 
     <div class="container">
@@ -24,6 +23,7 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Labs 1</h5>
+                        <p class="card-text">Find the endpoint that can be accessed without authentication</p>
                         <a href="1" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
@@ -32,6 +32,7 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Labs 2</h5>
+                        <p class="card-text">Account takeover by focusing on the cookie</p>
                         <a href="2" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>

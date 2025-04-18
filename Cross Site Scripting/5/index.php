@@ -1,7 +1,6 @@
 <?php
 error_reporting(0);
 header('X-XSS-Protection: 0');
-$param = $_GET['query'];
 ?>
 <html>
 
@@ -20,10 +19,7 @@ $param = $_GET['query'];
         <a href="./">> Back to Home</a>
         <h1>XSS Level 5</h1>
         <p>Try to alert using <b>document.domain</b></p>
-        <form class="form-inline my-2 my-lg-0" action="?query=" method="get">
-            <input class="form-control mr-sm-2" type="text" placeholder="<?php echo $param; ?>" name="query">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <p>Your user agent: <?php echo $_SERVER['HTTP_USER_AGENT']; ?></p>
     </div>
 
 </body>

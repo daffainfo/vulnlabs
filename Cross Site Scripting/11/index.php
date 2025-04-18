@@ -2,7 +2,6 @@
 error_reporting(0);
 header('X-XSS-Protection: 0');
 $param = $_GET['query'];
-$filtering = str_replace(array("'", "<"), "", $param);
 ?>
 <html>
 
@@ -22,13 +21,18 @@ $filtering = str_replace(array("'", "<"), "", $param);
         <h1>XSS Level 11</h1>
         <p>Try to alert using <b>document.domain</b></p>
         <form class="form-inline my-2 my-lg-0" action="?query=" method="get">
-            <input class="form-control mr-sm-2" type="text" placeholder="keyword" name="query">
+            <input class="form-control mr-sm-2" placeholder="keyword" name="query">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
+        <br>
+        <?php
+        if (!filter_var($param, FILTER_VALIDATE_EMAIL)) {
+            echo "Invalid email format";
+        } else {
+            echo $param;
+        }
+        ?>
     </div>
-    <script>
-        var query = '<?php echo $filtering; ?>'; var query2 = '<?php echo $filtering; ?>';
-
 
 </body>
 

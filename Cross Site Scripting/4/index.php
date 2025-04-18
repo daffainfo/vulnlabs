@@ -16,16 +16,15 @@ $param = $_GET['query'];
 </head>
 
 <body>
+    <!--<?php echo $param; ?>-->
     <div class="container m-5">
         <a href="./">> Back to Home</a>
         <h1>XSS Level 4</h1>
         <p>Try to alert using <b>document.domain</b></p>
         <form class="form-inline my-2 my-lg-0" action="?query=" method="get">
-            <input class="form-control mr-sm-2" type="text" placeholder="keyword ..." name="query">
+            <input class="form-control mr-sm-2" type="text" placeholder="keyword" name="query">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <br>
-        <?php echo "Result: ", base64_encode($param); ?>
     </div>
 
 </body>

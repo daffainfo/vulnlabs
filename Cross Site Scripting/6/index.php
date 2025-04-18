@@ -16,7 +16,6 @@ $param = $_GET['query'];
 </head>
 
 <body>
-    <!--<?php echo $param; ?>-->
     <div class="container m-5">
         <a href="./">> Back to Home</a>
         <h1>XSS Level 6</h1>
@@ -26,7 +25,12 @@ $param = $_GET['query'];
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
+    <script>
+        var query = '<?php echo str_replace("'", "", $param); ?>';
+    </script>
+
 
 </body>
+
 
 </html>

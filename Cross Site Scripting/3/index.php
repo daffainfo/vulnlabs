@@ -21,11 +21,9 @@ $param = $_GET['query'];
         <h1>XSS Level 3</h1>
         <p>Try to alert using <b>document.domain</b></p>
         <form class="form-inline my-2 my-lg-0" action="?query=" method="get">
-            <input class="form-control mr-sm-2" type="url" placeholder="keyword" name="query">
+            <input class="form-control mr-sm-2" type="text" placeholder="<?php echo $param; ?>" name="query">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <br>
-        <?php echo preg_replace(array('/alert/', '/prompt/'), '', $param) ?>
     </div>
 
 </body>

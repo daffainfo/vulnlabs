@@ -2,6 +2,7 @@
 error_reporting(0);
 header('X-XSS-Protection: 0');
 $param = $_GET['query'];
+$filtering = str_replace(array("'", "<"), "", $param);
 ?>
 <html>
 
@@ -26,7 +27,8 @@ $param = $_GET['query'];
         </form>
     </div>
     <script>
-        var query = '<?php echo str_replace(array(">", "<"), "", $param); ?>';
+        var query = '<?php echo $filtering; ?>'; var query2 = '<?php echo $filtering; ?>';
+    </script>
 
 
 </body>

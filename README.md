@@ -23,3 +23,7 @@ $ mysql -u vulnlab -p vulnlabs < vulnlabs.sql
 $ chmod -R 777 /var/www/html/vulnlabs
 $ chown -R www-data:www-data /var/www/html/vulnlabs
 ```
+
+## To-Do
+[] Add Dockerfile
+[] Beautify the website

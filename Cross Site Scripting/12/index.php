@@ -21,17 +21,18 @@ $param = $_GET['query'];
         <h1>XSS Level 12</h1>
         <p>Try to alert using <b>document.domain</b></p>
         <form class="form-inline my-2 my-lg-0" action="?query=" method="get">
-            <input class="form-control mr-sm-2" type="text" placeholder="keyword" name="query">
+            <input class="form-control mr-sm-2" type="url" placeholder="keyword" name="query">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
-    </div>
-    <script>
-        var xss = 1;
-        if (xss < 10) {
-            var test = '<?php echo str_replace(array("<", ">"), "", $param); ?>';
+        <br>
+        <?php
+        if (!filter_var($param, FILTER_VALIDATE_URL)) {
+            echo "Invalid URL";
+        } else {
+            echo "<a href='" . $param . "'>Click here</a>";
         }
-
-
+        ?>
+    </div>
 </body>
 
 </html>
